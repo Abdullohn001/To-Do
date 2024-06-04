@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.main{
+  background-image: url(../image/Bitmap.png);
+  background-size: 1440px 300px;
+  background-repeat: no-repeat;
+
+}

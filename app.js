@@ -1,0 +1,33 @@
+const formEl = document.querySelector("#form");
+const ulEl = document.querySelector("#ul");
+const errorMesg = document.querySelector("#error-message");
+const clear = document.querySelector("#clear")
+
+formEl.addEventListener("submit", (e) => {
+  e.preventDefault();
+  if (formEl.input.value.trim()) {
+    const li = document.createElement("li");
+    const spanRound = document.createElement("span");
+    const paragrfText = document.createElement("p");
+    const check = document.createElement("input");
+    const button = document.createElement("button")
+    spanRound.classList.add("span");
+    paragrfText.classList.add("param")
+    li.classList.add("li-style");
+    button.classList.add("remove")
+    button.textContent = "Complate"
+    button.addEventListener("click", () => paragrfText.classList.toggle("complate"));
+    paragrfText.textContent = formEl.input.value;
+    li.appendChild(paragrfText);
+    li.appendChild(button);
+    ulEl.appendChild(li);
+    errorMesg.textContent = "";
+    formEl.input.value = "";
+    } else {
+    errorMesg.textContent = "You should write something :(";
+    errorMesg.style.color = "darkred";
+    errorMesg.style.fontWeight = "bold";
+  }
+});
+
+  clear.addEventListener("click", () => location.reload());
