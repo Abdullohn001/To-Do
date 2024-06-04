@@ -1,6 +1,5 @@
 const formEl = document.querySelector("#form");
 const ulEl = document.querySelector("#ul");
-const errorMesg = document.querySelector("#error-message");
 const clear = document.querySelector("#clear")
 
 formEl.addEventListener("submit", (e) => {
