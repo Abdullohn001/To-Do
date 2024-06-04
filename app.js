@@ -9,7 +9,6 @@ formEl.addEventListener("submit", (e) => {
     const li = document.createElement("li");
     const spanRound = document.createElement("span");
     const paragrfText = document.createElement("p");
-    const check = document.createElement("input");
     const button = document.createElement("button")
     spanRound.classList.add("span");
     paragrfText.classList.add("param")
@@ -24,9 +23,7 @@ formEl.addEventListener("submit", (e) => {
     errorMesg.textContent = "";
     formEl.input.value = "";
     } else {
-    errorMesg.textContent = "You should write something :(";
-    errorMesg.style.color = "darkred";
-    errorMesg.style.fontWeight = "bold";
+    alert("You should write something :(");
   }
 });
 
